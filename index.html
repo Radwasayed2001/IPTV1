@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreamElite - Premium IPTV Subscriptions</title>
+    <meta name="description" content="Get access to premium IPTV channels with StreamElite. High-quality streaming, extensive coverage, and flexible subscription plans.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'gray-50': '#F8FAFC',
+                        'gray-200': '#E2E8F0',
+                        'gray-300': '#CBD5E1',
+                        'gray-400': '#94A3B8',
+                        'gray-600': '#475569',
+                        'gray-800': '#1E293B',
+                    },
+                },
+            },
+        }
+    </script>
+    <style type="text/css">
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.6s ease-out forwards;
+        }
+        .pricing-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .pricing-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-600">
+    <!-- Header -->
+    <header class="fixed w-full bg-white/90 backdrop-blur-sm shadow-sm z-50">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <a href="#" class="text-2xl font-bold text-gray-800">
+                    Stream<span class="text-blue-600">Elite</span>
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="hover:text-blue-600 transition-colors">Home</a>
+                    <a href="#" class="hover:text-blue-600 transition-colors">Reseller</a>
+                    <a href="#" class="hover:text-blue-600 transition-colors">Coverage</a>
+                    <a href="#" class="hover:text-blue-600 transition-colors">Setup Guide</a>
+                    <a href="#" class="hover:text-blue-600 transition-colors">Blog</a>
+                    <a href="#" class="hover:text-blue-600 transition-colors">Contact</a>
+                    <a href="#" class="hover:text-blue-600 transition-colors">About</a>
+                    <a href="#" class="flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                        <i class="fas fa-lock text-sm mr-2"></i>
+                        Client Area
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="toggleOpen" class="md:hidden text-gray-600 hover:text-gray-800">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="collapseMenu" class="hidden md:hidden">
+                <div class="py-4 space-y-4">
+                    <a href="#" class="block hover:text-blue-600 transition-colors">Home</a>
+                    <a href="#" class="block hover:text-blue-600 transition-colors">Reseller</a>
+                    <a href="#" class="block hover:text-blue-600 transition-colors">Coverage</a>
+                    <a href="#" class="block hover:text-blue-600 transition-colors">Setup Guide</a>
+                    <a href="#" class="block hover:text-blue-600 transition-colors">Blog</a>
+                    <a href="#" class="block hover:text-blue-600 transition-colors">Contact</a>
+                    <a href="#" class="block hover:text-blue-600 transition-colors">About</a>
+                    <a href="#" class="flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                        <i class="fas fa-lock text-sm mr-2"></i>
+                        Client Area
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-4xl md:text-6xl font-bold text-gray-800 mb-6 animate-fade-in">
+                    Premium IPTV Experience Like Never Before
+                </h1>
+                <p class="text-xl text-gray-600 mb-8 animate-fade-in" style="animation-delay: 0.2s">
+                    Stream thousands of channels in HD quality. Sports, movies, shows - everything you love, anywhere you go.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in" style="animation-delay: 0.4s">
+                    <a href="#" class="px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all transform hover:scale-105">
+                        Start Free Trial
+                    </a>
+                    <a href="#pricing" class="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-50 transition-all transform hover:scale-105 shadow-md">
+                        View Plans
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">
+                Choose Your Perfect Plan
+            </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+                <!-- 1 Month Plan -->
+                <div class="pricing-card bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-6 shadow-lg">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">1 Month</h3>
+                    <div class="text-3xl font-bold text-blue-600 mb-4">$12.99</div>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Full HD & 4K Channels
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            24/7 Support
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            All Devices Supported
+                        </li>
+                    </ul>
+                    <button class="w-full py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                        Select Plan
+                    </button>
+                </div>
+
+                <!-- 3 Month Plan -->
+                <div class="pricing-card bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-6 shadow-lg">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">3 Months</h3>
+                    <div class="text-3xl font-bold text-purple-600 mb-4">$29.99</div>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Full HD & 4K Channels
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            24/7 Support
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            All Devices Supported
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Save 20%
+                        </li>
+                    </ul>
+                    <button class="w-full py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors">
+                        Select Plan
+                    </button>
+                </div>
+
+                <!-- 6 Month Plan -->
+                <div class="pricing-card bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-2xl p-6 shadow-lg">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">6 Months</h3>
+                    <div class="text-3xl font-bold text-indigo-600 mb-4">$49.99</div>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Full HD & 4K Channels
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            24/7 Support
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            All Devices Supported
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Save 35%
+                        </li>
+                    </ul>
+                    <button class="w-full py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">
+                        Select Plan
+                    </button>
+                </div>
+
+                <!-- 12 Month Plan -->
+                <div class="pricing-card bg-gradient-to-br from-pink-50 to-pink-100 rounded-2xl p-6 shadow-lg">
+                    <div class="absolute -top-4 right-4 bg-pink-600 text-white px-3 py-1 rounded-full text-sm">
+                        Best Value
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">12 Months</h3>
+                    <div class="text-3xl font-bold text-pink-600 mb-4">$89.99</div>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Full HD & 4K Channels
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            24/7 Support
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            All Devices Supported
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Save 50%
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-gift text-green-500 mr-2"></i>
+                            Free VOD Access
+                        </li>
+                    </ul>
+                    <button class="w-full py-3 bg-pink-600 text-white rounded-lg hover:bg-pink-700 transition-colors">
+                        Select Plan
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">
+                Discover StreamElite
+            </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Feature 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-tv text-2xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">10,000+ Channels</h3>
+                    <p class="text-gray-600">Access a vast library of international channels in HD and 4K quality.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-mobile-alt text-2xl text-purple-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Multi-Device Support</h3>
+                    <p class="text-gray-600">Watch on your TV, phone, tablet, or computer - anywhere, anytime.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-clock text-2xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">24/7 Support</h3>
+                    <p class="text-gray-600">Our dedicated team is always here to help you with any questions.</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-film text-2xl text-red-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">VOD Library</h3>
+                    <p class="text-gray-600">Extensive collection of movies and TV shows on demand.</p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-bolt text-2xl text-yellow-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">High Performance</h3>
+                    <p class="text-gray-600">Ultra-fast servers ensuring smooth streaming experience.</p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-shield-alt text-2xl text-pink-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Secure Connection</h3>
+                    <p class="text-gray-600">Encrypted streaming for your privacy and security.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Events Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">
+                Upcoming Live Events
+            </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+                <!-- Event 1 -->
+                <div class="group relative overflow-hidden rounded-xl shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1577223625816-7546f13df25d" alt="Football match" class="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-4">
+                        <div>
+                            <h3 class="text-white font-semibold mb-1">Champions League Final</h3>
+                            <p class="text-gray-200 text-sm">June 1, 2024 - 20:00 GMT</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 2 -->
+                <div class="group relative overflow-hidden rounded-xl shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211" alt="Boxing match" class="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-4">
+                        <div>
+                            <h3 class="text-white font-semibold mb-1">World Title Boxing</h3>
+                            <p class="text-gray-200 text-sm">June 15, 2024 - 22:00 GMT</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 3 -->
+                <div class="group relative overflow-hidden rounded-xl shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1560012057-4372e14c5085" alt="Tennis match" class="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-4">
+                        <div>
+                            <h3 class="text-white font-semibold mb-1">Wimbledon Finals</h3>
+                            <p class="text-gray-200 text-sm">July 14, 2024 - 14:00 GMT</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 4 -->
+                <div class="group relative overflow-hidden rounded-xl shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1551361999-b29c2887eddf" alt="Formula 1 race" class="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-4">
+                        <div>
+                            <h3 class="text-white font-semibold mb-1">F1 Monaco GP</h3>
+                            <p class="text-gray-200 text-sm">May 26, 2024 - 13:00 GMT</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quality Timeline -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">
+                Our Quality Journey
+            </h2>
+            <div class="max-w-4xl mx-auto relative">
+                <!-- Timeline Line -->
+                <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-blue-200"></div>
+                
+                <!-- Timeline Items -->
+                <div class="space-y-12">
+                    <!-- Item 1 -->
+                    <div class="relative flex items-center justify-between">
+                        <div class="w-5/12 pr-8 text-right">
+                            <h3 class="font-semibold text-gray-800">HD Streaming Launch</h3>
+                            <p class="text-gray-600">First HD channels available</p>
+                        </div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-blue-600 rounded-full"></div>
+                        <div class="w-5/12 pl-8">
+                            <span class="text-blue-600">2020</span>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="relative flex items-center justify-between">
+                        <div class="w-5/12 pr-8 text-right">
+                            <span class="text-blue-600">2021</span>
+                        </div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-blue-600 rounded-full"></div>
+                        <div class="w-5/12 pl-8">
+                            <h3 class="font-semibold text-gray-800">4K Support Added</h3>
+                            <p class="text-gray-600">Ultra HD quality introduced</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="relative flex items-center justify-between">
+                        <div class="w-5/12 pr-8 text-right">
+                            <h3 class="font-semibold text-gray-800">Global CDN</h3>
+                            <p class="text-gray-600">Worldwide server network</p>
+                        </div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-blue-600 rounded-full"></div>
+                        <div class="w-5/12 pl-8">
+                            <span class="text-blue-600">2022</span>
+                        </div>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="relative flex items-center justify-between">
+                        <div class="w-5/12 pr-8 text-right">
+                            <span class="text-blue-600">2023</span>
+                        </div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-blue-600 rounded-full"></div>
+                        <div class="w-5/12 pl-8">
+                            <h3 class="font-semibold text-gray-800">AI-Powered Streaming</h3>
+                            <p class="text-gray-600">Smart quality adaptation</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 5 -->
+                    <div class="relative flex items-center justify-between">
+                        <div class="w-5/12 pr-8 text-right">
+                            <h3 class="font-semibold text-gray-800">8K Ready</h3>
+                            <p class="text-gray-600">Future-proof quality</p>
+                        </div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-blue-600 rounded-full"></div>
+                        <div class="w-5/12 pl-8">
+                            <span class="text-blue-600">2024</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">
+                What Our Customers Say
+            </h2>
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="https://i.pravatar.cc/150?img=1" alt="Customer" class="w-12 h-12 rounded-full">
+                        <div class="ml-4">
+                            <h4 class="font-semibold text-gray-800">Sarah Johnson</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Amazing service! The quality is outstanding and customer support is always helpful. Best IPTV service I've used."</p>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="https://i.pravatar.cc/150?img=2" alt="Customer" class="w-12 h-12 rounded-full">
+                        <div class="ml-4">
+                            <h4 class="font-semibold text-gray-800">Michael Chen</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"The channel selection is incredible. I can watch all my favorite sports events in HD quality. Highly recommended!"</p>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="https://i.pravatar.cc/150?img=3" alt="Customer" class="w-12 h-12 rounded-full">
+                        <div class="ml-4">
+                            <h4 class="font-semibold text-gray-800">Emma Davis</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Reliable service with great picture quality. The VOD library is extensive and always updated with new content."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">
+                Why Choose StreamElite?
+            </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Reason 1 -->
+                <div class="flex items-start space-x-4">
+                    <div class="flex-shrink-0">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                            <i class="fas fa-check text-2xl text-blue-600"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">99.9% Uptime</h3>
+                        <p class="text-gray-600">Reliable service with minimal interruptions</p>
+                    </div>
+                </div>
+
+                <!-- Reason 2 -->
+                <div class="flex items-start space-x-4">
+                    <div class="flex-shrink-0">
+                        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                            <i class="fas fa-dollar-sign text-2xl text-green-600"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Best Value</h3>
+                        <p class="text-gray-600">Competitive pricing with premium features</p>
+                    </div>
+                </div>
+
+                <!-- Reason 3 -->
+                <div class="flex items-start space-x-4">
+                    <div class="flex-shrink-0">
+                        <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center">
+                            <i class="fas fa-globe text-2xl text-purple-600"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Global Content</h3>
+                        <p class="text-gray-600">International channels from all regions</p>
+                    </div>
+                </div>
+
+                <!-- Reason 4 -->
+                <div class="flex items-start space-x-4">
+                    <div class="flex-shrink-0">
+                        <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center">
+                            <i class="fas fa-headset text-2xl text-red-600"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">24/7 Support</h3>
+                        <p class="text-gray-600">Always here when you need help</p>
+                    </div>
+                </div>
+
+                <!-- Reason 5 -->
+                <div class="flex items-start space-x-4">
+                    <div class="flex-shrink-0">
+                        <div class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center">
+                            <i class="fas fa-shield-alt text-2xl text-yellow-600"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Secure & Private</h3>
+                        <p class="text-gray-600">Encrypted connections for your safety</p>
+                    </div>
+                </div>
+
+                <!-- Reason 6 -->
+                <div class="flex items-start space-x-4">
+                    <div class="flex-shrink-0">
+                        <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center">
+                            <i class="fas fa-sync text-2xl text-indigo-600"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Regular Updates</h3>
+                        <p class="text-gray-600">New channels and features added regularly</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-4">StreamElite</h3>
+                    <p class="mb-4">Premium IPTV service provider with global coverage and exceptional quality.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-white"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="hover:text-white"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white">Home</a></li>
+                        <li><a href="#" class="hover:text-white">Pricing</a></li>
+                        <li><a href="#" class="hover:text-white">Features</a></li>
+                        <li><a href="#" class="hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Support</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white">Help Center</a></li>
+                        <li><a href="#" class="hover:text-white">Setup Guide</a></li>
+                        <li><a href="#" class="hover:text-white">FAQ</a></li>
+                        <li><a href="#" class="hover:text-white">Contact Support</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Contact Us</h4>
+                    <ul class="space-y-2">
+                        <li><i class="fas fa-envelope mr-2"></i> support@streamelite.com</li>
+                        <li><i class="fas fa-phone mr-2"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-clock mr-2"></i> 24/7 Support</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p>&copy; 2024 StreamElite. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Chat Widget -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <button class="bg-blue-600 text-white w-14 h-14 rounded-full shadow-lg flex items-center justify-center hover:bg-blue-700 transition-colors">
+            <i class="fas fa-comments text-2xl"></i>
+        </button>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        const toggleOpen = document.getElementById('toggleOpen');
+        const collapseMenu = document.getElementById('collapseMenu');
+
+        toggleOpen.addEventListener('click', () => {
+            collapseMenu.classList.toggle('hidden');
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const href = this.getAttribute('href');
+                if (href === '#') return;
+                
+                const target = document.querySelector(href);
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!collapseMenu.classList.contains('hidden')) {
+                        collapseMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
